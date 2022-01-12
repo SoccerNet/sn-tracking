@@ -25,7 +25,7 @@ To install the pip package simply run:
 ```python
 from SoccerNet.Downloader import SoccerNetDownloader
 mySoccerNetDownloader = SoccerNetDownloader(LocalDirectory="path/to/SoccerNet")
-mySoccerNetDownloader.downloadGames(files=["SocccerNet-MOT.zip"], task="tracking") # download frames and labels for the 150 clips of the challenge - Requires around 30 GB of local storage
+mySoccerNetDownloader.download(task="tracking", split=["train","valid","test","challenge"]) # download all splits for the tracking task - Requires around 30 GB of local storage
 ```
 
 Please follow the instructions provided in the [Download](Download) folder of this repository. Do also mind that signing an Non-Disclosure agreement (NDA) is required to access the LQ and HQ videos: [NDA](https://docs.google.com/forms/d/e/1FAIpQLSfYFqjZNm4IgwGnyJXDPk2Ko_lZcbVtYX73w5lf6din5nxfmA/viewform).
