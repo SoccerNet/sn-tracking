@@ -9,6 +9,8 @@ The Tracking dataset consists of 12 complete soccer games from the main camera i
  - one complete halftime annotated with tracking data.
  - the complete videos for the 12 games.
 
+Note that a subset of this data is used in this first challenge.
+
 Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details can be found on the [challenge website](https://eval.ai/web/challenges/challenge-page/761/overview), or on the [main page](https://soccer-net.org/).
 
 The participation deadline is fixed at the 30th of May 2022.
