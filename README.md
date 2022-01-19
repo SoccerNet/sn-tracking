@@ -16,7 +16,7 @@ Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsor
 The participation deadline is fixed at the 30th of May 2022.
 The official rules and guidelines will be provided in [ChallengeRules.md](ChallengeRules.md) around mid-February 2022.
 
-<a href="">
+<a href="https://youtu.be/tA9E1hkiyB0">
 <p align="center"><img src="Images/Thumbnail.png" width="720"></p>
 </a>
 
