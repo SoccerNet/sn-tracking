@@ -11,7 +11,7 @@ The Tracking dataset consists of 12 complete soccer games from the main camera i
 
 Note that a subset of this data is used in this first challenge. (150 clips of 30 seconds)
 
-Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details will soon be available on the [challenge website](https://eval.ai/web/challenges/challenge-page/761/overview), or on the [main page](https://soccer-net.org/).
+Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details will soon be available on the [challenge website](https://eval.ai/web/challenges/challenge-page/761/overview), or on the [main page](https://www.soccer-net.org/).
 
 The participation deadline is fixed at the 30th of May 2022.
 The official rules and guidelines will be provided in [ChallengeRules.md](ChallengeRules.md) around mid-February 2022.
