@@ -1,6 +1,6 @@
 # SoccerNet - Tracking
 
-Welcome to the SoccerNet Development Kit for the Tracking Task and Challenge. This kit is meant as a help to get started working with the data and the proposed task. More information about the dataset can be found on our [official website](https://soccer-net.org/).
+Welcome to the SoccerNet Development Kit for the Tracking Task and Challenge. This kit is meant as a help to get started working with the data and the proposed task. More information about the dataset can be found on our [official website](https://www.soccer-net.org/).
 
 <p align="center"><img src="Images/GraphicalAbstract-tracking.png" width="640"></p>
 
