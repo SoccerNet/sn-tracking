@@ -42,7 +42,7 @@ mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","valid","
 ## Task description
 
 Multi-object tracking (MOT) aims at recovering trajectories of multiple objects in time by estimating object bounding boxes and identities in videos sequences. 
-We consider two tasks: (1) a pure re-identification task that considers ground-truth detections (task of the first challenge), or (2) a complete tracking task that expects detecting the objects of interest from the raw video (task for benchmarking and future challenges).
+We consider two tasks: (1) a pure association task that considers ground-truth detections (task of the first challenge), or (2) a complete tracking task that expects detecting the objects of interest from the raw video (task for benchmarking and future challenges).
 
 So for the first challenge, one may use the provided ground-truth bounding boxes and focus only on the association task.
 
