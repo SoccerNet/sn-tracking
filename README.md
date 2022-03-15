@@ -9,12 +9,12 @@ The Tracking dataset consists of 12 complete soccer games from the main camera i
  - one complete halftime annotated with tracking data.
  - the complete videos for the 12 games.
 
-Note that a subset of this data is used in this first challenge. (150 clips of 30 seconds)
+Note that a subset of this data is used in this first challenge. In particular, this accounts for 57 30-seconds clips for the train set, 49 clips for the test set, 58 clips for our first public challenge, and 37 clips for our future challenges, including the entire half-time video in the latter.
 
-Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details will soon be available on the [challenge website](https://eval.ai/web/challenges/challenge-page/761/overview), or on the [main page](https://www.soccer-net.org/).
+Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details are available on the [challenge website](), or on the [main page](https://www.soccer-net.org/).
 
 The participation deadline is fixed at the 30th of May 2022.
-The official rules and guidelines will be provided in [ChallengeRules.md](ChallengeRules.md) around mid-February 2022.
+The official rules and guidelines are provided in [ChallengeRules.md](ChallengeRules.md).
 
 <a href="https://youtu.be/tA9E1hkiyB0">
 <p align="center"><img src="Images/Thumbnail.png" width="720"></p>
@@ -38,6 +38,18 @@ mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","valid","
 ```
 
 -->
+
+## Task description
+
+Multi-object tracking (MOT) aims at recovering trajectories of multiple objects in time by estimating object bounding boxes and identities in videos sequences. 
+We consider two tasks: (1) a pure re-identification task that considers ground-truth detections (task of the first challenge), or (2) a complete tracking task that expects detecting the objects of interest from the raw video (task for benchmarking and future challenges).
+
+So for the first challenge, one may use the provided ground-truth bounding boxes and focus only on the association task.
+
+The object classes are not taken into account in this challenge or the evaluation. The object to retrieve are among the following classes: players, goalkeepers, referees, balls and any other human entering the field.
+
+For our benchmark and challenge, we consider HOTA as the main metric. More specifically, this metric can be decomposed into two components: DetA and AssA, focusing on detection and association accuracy, respectively. 
+
 ## Benchmark Implementations
 
 This repository will soon contain several [benchmarks](Benchmarks) for the tracking task. You can use these codes to build upon our methods and improve the performances.
