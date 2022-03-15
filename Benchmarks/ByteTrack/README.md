@@ -1,13 +1,20 @@
-Dataset organize
+Clone https://github.com/ifzhang/ByteTrack into the current folder
 
-Clone https://github.com/ifzhang/ByteTrack
-Replace configs/datasets/mot.yml with ...
+Get data into 
+Download pretrained weights
+
+
+
+copy demo_track.py into tools/demo_track.py
+copy yolox_x_soccernet.py into exps/example/mot/
 
 With ground truth
-python -u tools/demo_track.py image -f exps/example/mot/yolox_x_soccernet.py -c pretrained/bytetrack_x_mot20.tar --fp16 --fuse --match_thresh 0.7 --save_result --path /mnt/storage/gait-0/xin/dataset/Soccernet-v2_tracking/test/$file/img1
-
+python tools/demo_track.py image -f exps/example/mot/yolox_x_soccernet.py -c pretrained/bytetrack_x_mot20.tar --fp16 --fuse --match_thresh 0.8 \
+--save_result --path /mnt/storage/gait-0/xin/dataset/Soccernet-v2_tracking/test/$file/img1
 
 Without ground truth
+set self.inference_with_ground_truth in exps/example/mot/yolox_x_soccernet.py to False
 python tools/track.py -f exps/example/mot/yolox_x_soccernet.py -c pretrained/bytetrack_x_mot20.tar -b 1 -d 1 --fp16 --fuse --match_thresh 0.8 --mot20
+
 
 
