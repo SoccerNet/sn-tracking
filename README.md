@@ -22,7 +22,7 @@ The official rules and guidelines will be provided in [ChallengeRules.md](Challe
 
 ## How to download SoccerNet-tracking
 
-The data for the train and test sets will be available at the beginning of February 2022 and the challenge set around mid-February.
+The data for the train and test sets will be available at the beginning of March 2022 and the challenge set around mid-March.
 
 <!--
 A [SoccerNet pip package](https://pypi.org/project/SoccerNet/) to easily download the data and the annotations is available. 
