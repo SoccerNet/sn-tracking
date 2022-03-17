@@ -38,7 +38,7 @@ mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","test","c
 
 ## Data format
 
-The ground truth and detections are stored in comma-separate csv files with $10$ columns. 
+The ground truth and detections are stored in comma-separate csv files with 10 columns. 
 These values correspond in order to: frame ID, track ID, top left coordinate of the bounding box, top y coordinate, width, height, confidence score for the detection (always 1. for the ground truth) and the remaining values are set to -1 as they are not used in our dataset, but are needed to comply with the MOT20 requirements.
 
 ## Task description
