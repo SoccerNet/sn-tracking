@@ -22,22 +22,19 @@ The official rules and guidelines are provided in [ChallengeRules.md](ChallengeR
 
 ## How to download SoccerNet-tracking
 
-The data for the train and test sets will be available at the beginning of March 2022 and the challenge set around mid-March.
-
-<!--
-A [SoccerNet pip package](https://pypi.org/project/SoccerNet/) to easily download the data and the annotations is available. 
+We provide a [SoccerNet pip package](https://pypi.org/project/SoccerNet/) to easily download the data and the annotations. 
 
 To install the pip package simply run:
 
 <code>pip install SoccerNet</code>
 
+Then, to download the tracking data, enter the following commands:
+
 ```python
 from SoccerNet.Downloader import SoccerNetDownloader
 mySoccerNetDownloader = SoccerNetDownloader(LocalDirectory="path/to/SoccerNet")
-mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","valid","test","challenge"]) # download all splits for the tracking task - Requires around 30 GB of local storage
+mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","test","challenge"])
 ```
-
--->
 
 ## Task description
 
