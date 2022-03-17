@@ -36,6 +36,11 @@ mySoccerNetDownloader = SoccerNetDownloader(LocalDirectory="path/to/SoccerNet")
 mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","test","challenge"])
 ```
 
+## Data format
+
+The ground truth and detections are stored in comma-separate csv files with $10$ columns. 
+These values correspond in order to: frame ID, track ID, top left coordinate of the bounding box, top y coordinate, width, height, confidence score for the detection (always 1. for the ground truth) and the remaining values are set to -1 as they are not used in our dataset, but are needed to comply with the MOT20 requirements.
+
 ## Task description
 
 Multi-object tracking (MOT) aims at recovering trajectories of multiple objects in time by estimating object bounding boxes and identities in videos sequences. 
@@ -46,6 +51,8 @@ So for the first challenge, one may use the provided ground-truth bounding boxes
 The object classes are not taken into account in this challenge or the evaluation. The object to retrieve are among the following classes: players, goalkeepers, referees, balls and any other human entering the field.
 
 For our benchmark and challenge, we consider HOTA as the main metric. More specifically, this metric can be decomposed into two components: DetA and AssA, focusing on detection and association accuracy, respectively. 
+
+
 
 ## Benchmark Implementations
 
