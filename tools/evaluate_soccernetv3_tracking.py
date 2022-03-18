@@ -46,11 +46,12 @@ import sys
 import os
 import argparse
 from multiprocessing import freeze_support
+import zipfile
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import trackeval  # noqa: E402
 
-if __name__ == '__main__':
+def main(args):
     freeze_support()
 
     # Command line interface:
@@ -65,7 +66,29 @@ if __name__ == '__main__':
             parser.add_argument("--" + setting, nargs='+')
         else:
             parser.add_argument("--" + setting)
+    
+    parser.add_argument('--TRACKERS_FOLDER_ZIP', type=str, default = '')
+    parser.add_argument('--GT_FOLDER_ZIP', type=str, default = '')
+
     args = parser.parse_args().__dict__
+    # if not empty ..., extract and modify trackers folder
+    assert len(args.TRACKERS_FOLDER_ZIP) > 0
+    assert len(args.GT_FOLDER_ZIP) > 0
+
+    if os.path.exists('./temp'):
+        os.remove('./temp')
+    
+    os.mkdir('./temp')
+    
+    # temp/test/data
+    # temp/gt
+
+    with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
+        zip_ref.extractall(directory_to_extract_to)
+
+    # linux command line extract zip
+
+
     for setting in args.keys():
         if args[setting] is not None:
             if type(config[setting]) == type(True):
