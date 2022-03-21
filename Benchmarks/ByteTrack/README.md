@@ -31,6 +31,11 @@ Go into SN_TRACKING_HOME
     export ByteTrack_HOME=<ByteTrack_HOME>
     cd <ByteTrack_HOME>
     bash run_bytetrack_gt_batch.sh
+    export SN_TRACKING_MODE=test
+```
+To run challenge:
+```
+export SN_TRACKING_MODE=challenge
 ```
 
 ### Zip and generate results for evaluation online
