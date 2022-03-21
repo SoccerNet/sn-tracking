@@ -75,19 +75,15 @@ def main(args):
     assert len(args.TRACKERS_FOLDER_ZIP) > 0
     assert len(args.GT_FOLDER_ZIP) > 0
 
-    if os.path.exists('./temp'):
-        os.remove('./temp')
-    
     os.mkdir('./temp')
-    
-    # temp/test/data
-    # temp/gt
+    os.mkdir('./temp/test')
+    os.mkdir('./temp/gt')
+    os.mkdir('./temp/test/data')
 
-    with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
-        zip_ref.extractall(directory_to_extract_to)
-
-    # linux command line extract zip
-
+    with zipfile.ZipFile(args.TRACKERS_FOLDER_ZIP, 'r') as zip_ref:
+        zip_ref.extractall('./temp/test')
+    with zipfile.ZipFile(args.GT_FOLDER_ZIP, 'r') as zip_ref:
+        zip_ref.extractall('./temp/gt')
 
     for setting in args.keys():
         if args[setting] is not None:

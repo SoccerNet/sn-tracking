@@ -103,7 +103,7 @@ class Exp(MyExp):
         from yolox.data import MOTDataset, ValTransform
 
         valdataset = MOTDataset(
-            data_dir=os.path.join(get_yolox_datadir(), "Soccernet-v2_tracking"),
+            data_dir=os.path.join(get_yolox_datadir(), "SN_tracking"),
             json_file=self.val_ann,
             img_size=self.test_size,
             name='test', # change to train when running on training set
