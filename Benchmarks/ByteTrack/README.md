@@ -3,17 +3,20 @@ Make sure CUDA and CUDNN are properly installed and related environment variable
 Verified versions are anaconda3-5.1.0 + CUDA 10.0.130 + CUDNN 7.6.5 on Ubuntu 20.04.3 LTS. 
 
 ### Obtain ByteTrack code
-Follow ByteTrack instructions to [Installing on the host machine](https://github.com/ifzhang/ByteTrack#1-installing-on-the-host-machine)
-Let the source folder be. <ByteTrack_HOME>
+Follow ByteTrack instructions to [Installing on the host machine](https://github.com/ifzhang/ByteTrack#1-installing-on-the-host-machine).
+Let the source folder be <ByteTrack_HOME>.
 Download bytetrack_x_mot20 pretrained model from the same page and put it in <ByteTrack_HOME>/pretrained.
 
 ### Download this repo and replace a few files in ByteTrack
 ```
     git clone https://github.com/SoccerNet/sn-tracking.git  SN_TRACKING_HOME
-```
+    pip install SoccerNet
 
-Download soccernet data and extract
-Move data into dataset/SN_tracking
+```
+Go into SN_TRACKING_HOME
+```
+    python tools/download_data.py
+```
 
 ### Update Bytetrack code for Soccernet tracking
 ```
@@ -38,15 +41,4 @@ The generated soccernet_mot_results.zip can be submitted to the evaluation serve
 
 ### Evaluate locally
 
-
-
-With ground truth
-
-arrange ground truth into ... '/../det/det.txt'
-
-python tools/demo_track.py image -f exps/example/mot/yolox_x_soccernet.py -c pretrained/bytetrack_x_mot20.tar --fp16 --fuse --match_thresh 0.8 \
---save_result --path /mnt/storage/gait-0/xin/dataset/Soccernet-v2_tracking/test/$file/img1
-
-zip results:
-zip soccernet_mot_results.zip <RESULT_FOLDER>/SNMOT-???.txt
 
