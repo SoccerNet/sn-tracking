@@ -81,9 +81,13 @@ def main(args):
     os.mkdir('./temp/test/data')
 
     with zipfile.ZipFile(args.TRACKERS_FOLDER_ZIP, 'r') as zip_ref:
-        zip_ref.extractall('./temp/test')
+        zip_ref.extractall('./temp/test/data')
     with zipfile.ZipFile(args.GT_FOLDER_ZIP, 'r') as zip_ref:
         zip_ref.extractall('./temp/gt')
+
+    args.TRACKERS_FOLDER = './temp'
+    args.TRACKERS_TO_EVAL = 'test'
+    args.GT_FOLDER = './temp/gt'
 
     for setting in args.keys():
         if args[setting] is not None:
