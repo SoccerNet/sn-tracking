@@ -18,18 +18,20 @@ Download the verified branch (release/2.3) of PaddleDetection to a directory, de
 ```
     git clone -b release/2.3 https://github.com/PaddlePaddle/PaddleDetection.git  PADDLE_DETECTION_ROOT
 ```
+Then follow the [instructions](https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.3/docs/tutorials/INSTALL.md#2-install-paddledetection) to install dependencies for PaddleDetection.
 
 ### Download this repo and copy a few files into PaddleDetection 
 Download this repo to a directory, denoted as SN_TRACKING_ROOT, and run
 ```
     git clone https://github.com/SoccerNet/sn-tracking.git  SN_TRACKING_ROOT
     cp -r SN_TRACKING_ROOT/Benchmarks/DeepSORT/configs  PADDLE_DETECTION_ROOT/
+    cp -r SN_TRACKING_ROOT/Benchmarks/DeepSORT/dataset/mot/*.py  PADDLE_DETECTION_ROOT/dataset/mot/
 ```
 
 ### Prepare the data into a unified format
 If you have not downloaded the dataset, follow the root level [readme](https://github.com/SoccerNet/sn-tracking#how-to-download-soccernet-tracking) to download (and unzip) the SoccerNet-tracking dataset. Denote the path of the dataset root directory as SN_TRACKING_DATA_ROOT, and run the following commands
 ```
-    mkdir PADDLE_DETECTION_ROOT/dataset/mot/image_lists
+    mkdir PADDLE_DETECTION_ROOT/dataset/mot/{image_lists,SN}
     ln -s SN_TRACKING_DATA_ROOT PADDLE_DETECTION_ROOT/dataset/mot/SN/images
 
     cd PADDLE_DETECTION_ROOT/dataset/mot/
@@ -40,6 +42,7 @@ If you have not downloaded the dataset, follow the root level [readme](https://g
 After running above commands, image lists will be generated under PADDLE_DETECTION_ROOT/dataset/mot/image_lists, labels will be generated under PADDLE_DETECTION_ROOT/dataset/mot/SN/labels_with_ids, and gt bboxes as detections will be generated under PADDLE_DETECTION_ROOT/dataset/mot/SN/det_files. This step is meet the [data format](https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.3/configs/mot/README_en.md#data-format) requirements of PaddleDetection.
 
 ### Run inference with a pretrained model
+Let INFERENCE_OUTPUT_TEST denote the output directory you want the results to save to.
 ```
     cd PADDLE_DETECTION_ROOT
     python tools/eval_mot.py -c configs/mot/deepsort/reid/deepsort_pcb_pyramid_r101_sn.yml --det_results_dir dataset/mot/SN/det_files/test/  --output_dir INFERENCE_OUTPUT_TEST/
@@ -53,8 +56,7 @@ To run the inference on the challenge set, simply change the value of "data_root
 ### Evaluation
 To run the evaluation, zip the inference output with the following commands. Then you can evaluate the performance according to the [evaluation instructions](TODO) or submit the zip file to the eval server. For the output on the test set, run the following to prepare the zip file:
 ```
-    cd INFERENCE_OUTPUT_TEST
-    cp -r mot_results soccernet_mot_results
-    zip -r soccernet_mot_results.zip soccernet_mot_results
+    cd INFERENCE_OUTPUT_TEST/mot_results
+    zip soccernet_mot_results.zip *.txt
 ```
 
