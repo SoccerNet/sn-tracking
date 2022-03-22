@@ -17,9 +17,11 @@ Go into SN_TRACKING_HOME
 ```
     python tools/download_data.py
 ```
+The data will be saved in SN_TRACKING_HOME.
 
 ### Update Bytetrack code for Soccernet tracking
 ```
+    cd <SN_TRACKING_HOME>/Benchmarks/ByteTrack
     cp -i demo_track.py <ByteTrack_HOME>/tools/demo_track.py
     cp -i yolox_x_soccernet.py <ByteTrack_HOME>/exps/example/mot/
     cp run_bytetrack_gt_batch.sh <ByteTrack_HOME>
@@ -40,7 +42,8 @@ export SN_TRACKING_MODE=challenge
 
 ### Zip and generate results for evaluation online
 ```
-    zip soccernet_mot_results.zip <RESULT_FOLDER>/SNMOT-???.txt
+    cd <RESULT_FOLDER>
+    zip soccernet_mot_results.zip SNMOT-???.txt
 ```
 The generated soccernet_mot_results.zip can be submitted to the evaluation server.
 
