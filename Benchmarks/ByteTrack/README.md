@@ -49,8 +49,10 @@ The generated soccernet_mot_results.zip can be submitted to the evaluation serve
 
 ### Evaluate locally
 
-python tools/evaluate_soccernet_v3_tracking.py --BENCHMARK SNMOT --DO_PREPROC False --SEQMAP_FILE tools/SNMOT-test.txt --TRACKERS_TO_EVAL test --SPLIT_TO_EVAL test --OUTPUT_SUB_FOLDER eval_results --TRACKERS_FOLDER_ZIP /mnt/storage/gait-0/xin/dev/ByteTrack/YOLOX_outputs/yolox_x_soccernet_gt_thresh_0.8/track_vis/soccernet_mot_results.zip --GT_FOLDER_ZIP gt.zip  
-
+```
 pip install git+https://github.com/JonathonLuiten/TrackEval.git
+
+python tools/evaluate_soccernet_v3_tracking.py --BENCHMARK SNMOT --DO_PREPROC False --SEQMAP_FILE tools/SNMOT-test.txt --TRACKERS_TO_EVAL test --SPLIT_TO_EVAL test --OUTPUT_SUB_FOLDER eval_results --TRACKERS_FOLDER_ZIP soccernet_mot_results.zip --GT_FOLDER_ZIP gt.zip  
+```
 
 

@@ -1,16 +1,17 @@
-# python scripts/run_mot_challenge.py 
-# \ --BENCHMARK SNMOT
-# \ --USE_PARALLEL False 
-# \ --NUM_PARALLEL_CORES 1 
-# \ --GT_FOLDER /mnt/storage/gait-0/xin/dataset/Soccernet-v2_tracking/test
-# \ --TRACKERS_FOLDER /mnt/storage/gait-0/xin/dev/ByteTrack/YOLOX_outputs/yolox_x_soccernet_wo_gt_match_thresh_0.8/track_results/ 
-# \--TRACKERS_TO_EVAL bytetrack
-# \ --METRICS HOTA CLEAR Identity
-
-
 """ run_mot_challenge.py
 
 Run example:
+
+python tools/evaluate_soccernet_v3_tracking.py \
+--BENCHMARK SNMOT \
+--DO_PREPROC False \
+--SEQMAP_FILE tools/SNMOT-test.txt \
+--TRACKERS_TO_EVAL test \
+--SPLIT_TO_EVAL test \
+--OUTPUT_SUB_FOLDER eval_results \
+--TRACKERS_FOLDER_ZIP soccernet_mot_results.zip \
+--GT_FOLDER_ZIP gt.zip  
+
 run_mot_challenge.py --USE_PARALLEL False --METRICS Hota --TRACKERS_TO_EVAL Lif_T
 
 Command Line Arguments: Defaults, # Comments
