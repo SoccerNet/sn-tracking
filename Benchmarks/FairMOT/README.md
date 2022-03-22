@@ -1,5 +1,3 @@
 
-Download dataset into source_folder/dataset/MOT/SN
-Copy gen_labels_SN.py into source_folder/dataset/MOT and run
-
-replace source_folder/configs/datasets/mot.yml with mot.yml
+Please refer to DeepSORT for the setup of FairMOT.
+Note that inference using gt bboxes is not available yet.
