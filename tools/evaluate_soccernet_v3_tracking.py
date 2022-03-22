@@ -47,11 +47,12 @@ import os
 import argparse
 from multiprocessing import freeze_support
 import zipfile
+import shutil
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import trackeval  # noqa: E402
 
-def main(args):
+if __name__ == '__main__':
     freeze_support()
 
     # Command line interface:
@@ -70,24 +71,33 @@ def main(args):
     parser.add_argument('--TRACKERS_FOLDER_ZIP', type=str, default = '')
     parser.add_argument('--GT_FOLDER_ZIP', type=str, default = '')
 
-    args = parser.parse_args().__dict__
+    # args = parser.parse_args().__dict__
+    args = parser.parse_args()
+    # import pdb; pdb.set_trace()
     # if not empty ..., extract and modify trackers folder
     assert len(args.TRACKERS_FOLDER_ZIP) > 0
     assert len(args.GT_FOLDER_ZIP) > 0
 
     os.mkdir('./temp')
-    os.mkdir('./temp/test')
     os.mkdir('./temp/gt')
-    os.mkdir('./temp/test/data')
+    os.mkdir('./temp/SNMOT-test/')
+    os.mkdir('./temp/SNMOT-test/test')
+    os.mkdir('./temp/SNMOT-test/test/data')
 
     with zipfile.ZipFile(args.TRACKERS_FOLDER_ZIP, 'r') as zip_ref:
-        zip_ref.extractall('./temp/test/data')
+        zip_ref.extractall('./temp/SNMOT-test/test/data')
     with zipfile.ZipFile(args.GT_FOLDER_ZIP, 'r') as zip_ref:
-        zip_ref.extractall('./temp/gt')
+        zip_ref.extractall('./temp/gt/SNMOT-test_0')
+
+    shutil.move('./temp/gt/SNMOT-test_0/test/', './temp/gt/SNMOT-test/')
 
     args.TRACKERS_FOLDER = './temp'
-    args.TRACKERS_TO_EVAL = 'test'
     args.GT_FOLDER = './temp/gt'
+
+    args = args.__dict__
+    args['SEQMAP_FILE'] = args['SEQMAP_FILE'][0]
+    args.pop('TRACKERS_FOLDER_ZIP', None)
+    args.pop('GT_FOLDER_ZIP', None)
 
     for setting in args.keys():
         if args[setting] is not None:
