@@ -53,10 +53,17 @@ To run the inference on the challenge set, simply change the value of "data_root
 ```
     python tools/eval_mot.py -c configs/mot/deepsort/reid/deepsort_pcb_pyramid_r101_sn_challenge.yml --det_results_dir dataset/mot/SN/det_files/challenge/  --output_dir INFERENCE_OUTPUT_CHALLENGE/
 ```
+
 ### Evaluation
-To run the evaluation, zip the inference output with the following commands. Then you can evaluate the performance according to the [evaluation instructions](TODO) or submit the zip file to the eval server. For the output on the test set, run the following to prepare the zip file:
+To run the evaluation, zip the inference output with the following commands. Then you can evaluate the performance locally or submit the zip file to the eval server. 
 ```
     cd INFERENCE_OUTPUT_TEST/mot_results
     zip soccernet_mot_results.zip *.txt
+```
+For the output on the test set, run the following to prepare the zip file and evaluate it locally:
+```
+    pip install git+https://github.com/JonathonLuiten/TrackEval.git
+    cd SN_TRACKING_ROOT
+    python tools/evaluate_soccernet_v3_tracking.py --BENCHMARK SNMOT --DO_PREPROC False --SEQMAP_FILE tools/SNMOT-test.txt --TRACKERS_TO_EVAL test --SPLIT_TO_EVAL test --OUTPUT_SUB_FOLDER eval_results --TRACKERS_FOLDER_ZIP soccernet_mot_results.zip --GT_FOLDER_ZIP gt.zip
 ```
 
