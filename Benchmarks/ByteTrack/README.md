@@ -49,6 +49,12 @@ The generated soccernet_mot_results.zip can be submitted to the evaluation serve
 
 ### Evaluate locally
 
+Generate gt.zip needed for evaluation
+```
+    python tools/zip_gt.py -f <SN_TRACKING_HOME>/test/
+
+```
+
 ```
 pip install git+https://github.com/JonathonLuiten/TrackEval.git
 

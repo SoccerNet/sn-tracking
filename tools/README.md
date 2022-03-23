@@ -1,1 +1,0 @@
-pip install git+https://github.com/JonathonLuiten/TrackEval.git
