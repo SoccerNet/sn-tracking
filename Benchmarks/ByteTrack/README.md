@@ -55,6 +55,8 @@ Generate gt.zip needed for evaluation
 
 ```
 
+Run evaluation.
+
 ```
 pip install git+https://github.com/JonathonLuiten/TrackEval.git
 
