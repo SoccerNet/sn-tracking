@@ -60,7 +60,13 @@ To run the evaluation, zip the inference output with the following commands. The
     cd INFERENCE_OUTPUT_TEST/mot_results
     zip soccernet_mot_results.zip *.txt
 ```
-For the output on the test set, run the following to prepare the zip file and evaluate it locally:
+
+To evaluate locally, you need to zip the ground truth txt files to get a gt.zip file.
+```
+    python tools/zip_gt.py -f SN_TRACKING_DATA_ROOT/test/
+```
+
+Run the following to evaluate on the test set locally:
 ```
     pip install git+https://github.com/JonathonLuiten/TrackEval.git
     cd SN_TRACKING_ROOT
