@@ -63,6 +63,7 @@ To run the evaluation, zip the inference output with the following commands. The
 
 To evaluate locally, you need to zip the ground truth txt files to get a gt.zip file.
 ```
+    cd SN_TRACKING_ROOT
     python tools/zip_gt.py -f SN_TRACKING_DATA_ROOT/test/
 ```
 
