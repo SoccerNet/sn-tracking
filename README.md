@@ -56,7 +56,7 @@ For our benchmark and challenge, we consider HOTA as the main metric. More speci
 
 ## Benchmark Implementations
 
-This repository will soon contain several [benchmarks](Benchmarks) for the tracking task. You can use these codes to build upon our methods and improve the performances.
+This repository contains several [benchmarks](Benchmarks) for the tracking task. You can use these codes to build upon state-of-the-art methods and improve the performances.
 
 ## Evaluation
 
