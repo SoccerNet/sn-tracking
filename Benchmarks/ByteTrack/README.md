@@ -62,5 +62,4 @@ pip install git+https://github.com/JonathonLuiten/TrackEval.git
 
 python tools/evaluate_soccernet_v3_tracking.py --BENCHMARK SNMOT --DO_PREPROC False --SEQMAP_FILE tools/SNMOT-test.txt --TRACKERS_TO_EVAL test --SPLIT_TO_EVAL test --OUTPUT_SUB_FOLDER eval_results --TRACKERS_FOLDER_ZIP soccernet_mot_results.zip --GT_FOLDER_ZIP gt.zip  
 ```
-
-
+It is expected to achieve a HOTA score of 71.5 on the test set.
