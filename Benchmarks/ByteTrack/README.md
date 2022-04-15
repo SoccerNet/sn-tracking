@@ -32,12 +32,12 @@ The data will be saved in SN_TRACKING_HOME.
 ```
     export ByteTrack_HOME=<ByteTrack_HOME>
     cd <ByteTrack_HOME>
-    bash run_bytetrack_gt_batch.sh
     export SN_TRACKING_MODE=test
+    bash run_bytetrack_gt_batch.sh
 ```
-To run challenge:
+To run challenge you should set the environment variable differently:
 ```
-export SN_TRACKING_MODE=challenge
+    export SN_TRACKING_MODE=challenge
 ```
 
 ### Zip and generate results for evaluation online
