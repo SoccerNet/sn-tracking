@@ -60,7 +60,7 @@ This repository contains several [benchmarks](Benchmarks) for the tracking task.
 
 ## Evaluation
 
-We use the [TrackEval](https://github.com/JonathonLuiten/TrackEval) repository to evaluate the performances. More details will come soon.
+We use the [TrackEval](https://github.com/JonathonLuiten/TrackEval) repository to evaluate the performances. To participate the challenge, you should submit the result as a zip file to [EvalAI](https://eval.ai/web/challenges/challenge-page/1539/overview). Please see the READMEs of our baseline methods under the "Benchmarks" directory for instructions on how to prepare the zipped results.
 
 ## Visualizations
 
