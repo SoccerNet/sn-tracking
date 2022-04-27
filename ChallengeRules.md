@@ -8,7 +8,7 @@ SoccerNet-Tracking is composed of 200 clips with complete tracking annotations.
 
 We propose the SoccerNet-v3 Tracking challenge to encourage the development of state-of-the-art tracking algorithm.
 
-We provide an [evaluation server]() for anyone competing in the SoccerNet-v3 tracking challenge. 
+We provide an [evaluation server](https://eval.ai/web/challenges/challenge-page/1539/overview) for anyone competing in the SoccerNet-v3 tracking challenge. 
 This evaluation server handles predictions for the open **test** set and the segregated **challenge** set.
 
 Winners will be announced in June 2022 at the ActivityNet workshop at CVPR. 
