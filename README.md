@@ -80,6 +80,17 @@ For further information check out the paper and supplementary material:
 https://arxiv.org/abs/2210.02365
 
 Please cite our work if you use the SoccerNet dataset:
+
+```bibtex
+@inproceedings{cioppa2022soccernet,
+  title={SoccerNet-Tracking: Multiple Object Tracking Dataset and Benchmark in Soccer Videos},
+  author={Cioppa, Anthony and Giancola, Silvio and Deliege, Adrien and Kang, Le and Zhou, Xin and Cheng, Zhiyu and Ghanem, Bernard and Van Droogenbroeck, Marc},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3491--3502},
+  year={2022}
+}
+```
+
 ```bibtex
 @inproceedings{Giancola_2022,
 	doi = {10.1145/3552437.3558545},
