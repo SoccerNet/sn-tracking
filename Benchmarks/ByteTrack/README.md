@@ -20,6 +20,19 @@ Go into SN_TRACKING_HOME
 The data will be saved in SN_TRACKING_HOME.
 
 ### Update Bytetrack code for Soccernet tracking
+
+For the 2021 Soccernet tracking challenge, ground truth detection bounding boxes were provided. For 2022, detection also needs to be done by the model. So the files used are different for the two years.
+
+#### 2022 challenge
+```
+    cd <SN_TRACKING_HOME>/Benchmarks/ByteTrack
+    cp -i demo_track_no_gt.py <ByteTrack_HOME>/tools/demo_track_no_gt.py
+    cp -i yolox_x_soccernet_no_gt.py <ByteTrack_HOME>/exps/example/mot/
+    cp run_bytetrack_no_gt_batch.sh <ByteTrack_HOME>
+    cp tools/evaluate_soccernet_v3_tracking.py <ByteTrack_HOME>
+```
+
+#### 2021 challenge
 ```
     cd <SN_TRACKING_HOME>/Benchmarks/ByteTrack
     cp -i demo_track.py <ByteTrack_HOME>/tools/demo_track.py
