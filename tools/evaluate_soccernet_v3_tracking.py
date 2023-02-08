@@ -90,6 +90,8 @@ if __name__ == '__main__':
     with zipfile.ZipFile(args.GT_FOLDER_ZIP, 'r') as zip_ref:
         zip_ref.extractall('./temp/gt/SNMOT-test_0')
 
+    if os.path.exists('./temp/gt/SNMOT-test_0/test-evalAI/'):
+        shutil.move('./temp/gt/SNMOT-test_0/test-evalAI/', './temp/gt/SNMOT-test_0/test/')
     shutil.move('./temp/gt/SNMOT-test_0/test/', './temp/gt/SNMOT-test/')
 
     args.TRACKERS_FOLDER = './temp'
