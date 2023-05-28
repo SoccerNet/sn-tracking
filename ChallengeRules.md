@@ -30,7 +30,7 @@ Prizes 💲💲💲 include $1000 cash award, sponsored by [Baidu Research](http
 ## How to win / What is the prize?
 
  - The winner will the individual/team who reaches the highest **HOTA** performance on the **challenge** set.
- - The deadline to submit your results is May 30th at 11.59 pm Pacific Time.
+ - The deadline to submit your results is May 30th at 11.59 pm Anywhere on earth.
  - The teams that perform best will be granted $1000 from our sponsor [Baidu Research](http://research.baidu.com/).
  - In order to be eligible for the prize, we require the individual/team to provide a short report describing the details of the methodology (CVPR format, max 3 pages)
 
