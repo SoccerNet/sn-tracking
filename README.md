@@ -11,9 +11,9 @@ The Tracking dataset consists of 12 complete soccer games from the main camera i
 
 Note that a subset of this data is used in this first challenge. In particular, this accounts for 57 30-seconds clips for the train set, 49 clips for the test set, 58 clips for our first public challenge, and 37 clips for our future challenges, including the entire half-time video in the latter.
 
-Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details are available on the [challenge website](https://eval.ai/web/challenges/challenge-page/1539/overview), or on the [main page](https://www.soccer-net.org/).
+Participate in our upcoming Challenge at CVPR and try to win up to 1000$ sponsored by [Baidu](https://www.baidu.com/)! All details are available on the [challenge website](https://eval.ai/web/challenges/challenge-page/1951/overview), or on the [main page](https://www.soccer-net.org/).
 
-The participation deadline is fixed at the 30th of May 2022.
+The participation deadline is fixed at the 30th of May 2023.
 The official rules and guidelines are provided in [ChallengeRules.md](ChallengeRules.md).
 
 <a href="https://youtu.be/tA9E1hkiyB0">
@@ -34,6 +34,7 @@ Then, to download the tracking data, enter the following commands:
 from SoccerNet.Downloader import SoccerNetDownloader
 mySoccerNetDownloader = SoccerNetDownloader(LocalDirectory="path/to/SoccerNet")
 mySoccerNetDownloader.downloadDataTask(task="tracking", split=["train","test","challenge"])
+mySoccerNetDownloader.downloadDataTask(task="tracking-2023", split=["train", "test", "challenge"])
 ```
 
 ## Data format
