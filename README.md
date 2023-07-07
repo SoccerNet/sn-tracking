@@ -20,6 +20,162 @@ The official rules and guidelines are provided in [ChallengeRules.md](ChallengeR
 <p align="center"><img src="Images/Thumbnail.png" width="720"></p>
 </a>
 
+### 2023 Challenge Leaderboard (Detection + Association) 
+
+<p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th style = "background-color: #FFFFFF;font-family: Century Gothic, sans-serif;font-size: medium;color: #305496;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">Team</th>
+      <th style = "background-color: #FFFFFF;font-family: Century Gothic, sans-serif;font-size: medium;color: #305496;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">HOTA</th>
+      <th style = "background-color: #FFFFFF;font-family: Century Gothic, sans-serif;font-size: medium;color: #305496;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">DetA</th>
+      <th style = "background-color: #FFFFFF;font-family: Century Gothic, sans-serif;font-size: medium;color: #305496;text-align: left;border-bottom: 2px solid #305496;padding: 0px 20px 0px 0px;width: auto">AssA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Kalisteo</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">75.61</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">75.38</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">75.94</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">MTIOT</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">69.54</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">75.18</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">64.45</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">MOT4MOT</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">66.27</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">70.32</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">62.62</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">ICOST</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">65.67</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">73.07</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">59.17</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">SAIVA_Tracking</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">63.2</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">70.45</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">56.87</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">ZTrackers</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">58.69</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">68.69</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">50.25</td>
+    </tr>
+    <tr>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">scnu</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">58.07</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">64.77</td>
+      <td style = "background-color: #D9E1F2;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">52.23</td>
+    </tr>
+    <tr>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">Baseline</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">42.38</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">34.41</td>
+      <td style = "background-color: white; color: black;font-family: Century Gothic, sans-serif;font-size: medium;text-align: left;padding: 0px 20px 0px 0px;width: auto">52.21</td>
+    </tr>
+  </tbody>
+</table></p>
+
+### 2022 Challenge Leaderboard (Association with GT Detections) 
+
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Team</th>
+      <th>HOTA</th>
+      <th>DetA</th>
+      <th>AssA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kalisteo</td>
+      <td>93.64</td>
+      <td>99.56</td>
+      <td>88.06</td>
+    </tr>
+    <tr>
+      <td>CBIOUT (CB-IoU)</td>
+      <td>93.25</td>
+      <td>99.76</td>
+      <td>87.15</td>
+    </tr>
+    <tr>
+      <td>tactica</td>
+      <td>93.17</td>
+      <td>99.85</td>
+      <td>86.94</td>
+    </tr>
+    <tr>
+      <td>FGV</td>
+      <td>92.49</td>
+      <td>99.76</td>
+      <td>85.74</td>
+    </tr>
+    <tr>
+      <td>smot</td>
+      <td>91.49</td>
+      <td>99.77</td>
+      <td>83.90</td>
+    </tr>
+    <tr>
+      <td>tianchao</td>
+      <td>89.42</td>
+      <td>99.62</td>
+      <td>80.27</td>
+    </tr>
+    <tr>
+      <td>who</td>
+      <td>88.99</td>
+      <td>99.74</td>
+      <td>79.39</td>
+    </tr>
+    <tr>
+      <td>tomo</td>
+      <td>88.94</td>
+      <td>99.77</td>
+      <td>79.28</td>
+    </tr>
+    <tr>
+      <td>dk</td>
+      <td>88.65</td>
+      <td>99.70</td>
+      <td>78.82</td>
+    </tr>
+    <tr>
+      <td>1p</td>
+      <td>88.55</td>
+      <td>99.68</td>
+      <td>78.67</td>
+    </tr>
+    <tr>
+      <td>Baseline*</td>
+      <td>70.89*</td>
+      <td>82.97</td>
+      <td>60.68</td>
+    </tr>
+    <tr>
+      <td>ret-1</td>
+      <td>57.81</td>
+      <td>70.07</td>
+      <td>47.89</td>
+    </tr>
+    <tr>
+      <td>WOTAICAILE</td>
+      <td>51.03</td>
+      <td>60.83</td>
+      <td>42.96</td>
+    </tr>
+  </tbody>
+</table>
+
 ## How to download SoccerNet-tracking
 
 We provide a [SoccerNet pip package](https://pypi.org/project/SoccerNet/) to easily download the data and the annotations. 
